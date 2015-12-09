@@ -1,0 +1,24 @@
+Author: Francisco Da Costa
+Student ID: 5026516
+
+Assignment 3: Dictionary utilizing Linked Lists.
+
+To Build:
+	$ make
+
+To Run:
+	$ ./Dictionary << <"textfile.txt">
+
+Purpose:
+
+The main function is designed to create a dictionary by reading a file.
+It has a maximum storage capacity of a hundred unique words. 
+It will store read words into the dictionary, as strings, and count the number of appearences of
+stored words. 
+When the program encounters a null string it will assume the file has been terminated,
+and will write the dictionary to the terminal, along with each words respective count.
+
+It also handles the case of the dictionary being full. It writes out to the terminal a 
+message aknowledging that the word cannot be stored, as the dictionary is full, and then
+continues analysing the rest of the document until termination. It doesn't end immediately,
+so that it may still count future occurances of words already stored in the dictionary.
