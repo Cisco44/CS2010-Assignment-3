@@ -1,0 +1,43 @@
+#ifndef DICTIONARY
+
+#define DICTIONARY
+
+
+#include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+
+using namespace std;
+
+const int MAX = 100;
+
+typedef string STRING;
+typedef bool BOOL;
+typedef string WORD;   
+
+typedef struct entry {
+      int count;                  /* frequency count for a particular word */
+      WORD w;                     /* the word itself */
+      struct entry *nextWord;     /* pointer to next entry */
+} ENTRY;
+
+typedef struct dict {
+
+     int maxEntries;		  
+     int numWords;                 
+     ENTRY *Words; 
+
+} DICT;
+
+
+
+
+BOOL FullDictionary(DICT &);
+BOOL InsertWord(DICT &, WORD);
+void Swap(ENTRY *&, ENTRY *&);
+void DumpDictionary(DICT &);
+WORD GetNextWord(void);
+ENTRY* LocateWord(DICT &, WORD);
+
+#endif
